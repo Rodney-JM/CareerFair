@@ -1,0 +1,110 @@
+main{
+    display: flex;
+
+    height: 100vh;
+    width: 100%
+}
+
+main section{
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-direction: row;
+    gap: -5rem;
+
+    transition: flex 0.5s ease;
+}
+
+main section img{
+    width: 100%;
+    filter: drop-shadow(1rem 1rem .9rem #00000080);  
+    
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    -webkit-user-select: none; /* (Safari, Chrome) */ 
+    -moz-user-select: none; /*(Firefox) */ 
+    -ms-user-select: none; /*Internet Explorer/Edge */
+    user-select:none;
+}
+
+main section img:hover{
+    transform: scale(1.1);
+}
+
+.description_container {
+    display: none;
+    flex-direction: column; 
+    align-items:self-start;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: opacity 0.5s ease;
+}
+
+.description_container h3{
+    font-family: "Montserrat", sans-serif;
+    font-size: 3rem;
+}
+
+.description_container p{
+    font-family: "Roboto";
+    width: 80%;
+}
+
+.est2 h3{
+    color:  #D3D3D3;
+}
+
+.est2 p{
+    color: #bababa;
+}
+
+.est3 h3, .est3 p{
+    color: #ffffff;
+}
+
+.clicked .description_container { 
+    display: flex;
+    opacity: 1;
+}
+
+.animatable { 
+    transition: transform 0.5s ease;
+}
+.clicked .animatable { 
+    transform: translateX(.2rem); 
+}
+
+.programming_sc{
+    background: linear-gradient(to bottom, var(--bg-sc1), rgb(106, 106, 106));
+}
+
+.programming_sc img{
+    width: 60%;
+    transform: scale(1.5);
+}
+
+.programming_sc img:hover{
+    transform: scale(1.6);
+}
+
+.scale img:hover{
+    transform: scale(1.1);
+}
+
+.robotics_sc{
+    background: linear-gradient(to top, var(--bg-sc2), rgb(17, 12, 61));
+}
+
+.robotics_sc img{
+    width: 60%;
+}
+
+.network_sc{
+    background:linear-gradient(to bottom, var(--bg-sc3), #230623);
+}
+
+.network_sc img{
+    width: 60%;
+}
